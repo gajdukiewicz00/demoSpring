@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Users</title>
+</head>
+<body>
+<h1>Список всех пользователей</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Login</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Перебираем всех пользователей -->
+    <tr th:each="usr : ${users}">
+        <td th:text="${usr.id}">ID</td>
+        <td th:text="${usr.login}">Login</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
